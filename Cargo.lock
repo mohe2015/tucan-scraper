@@ -1229,15 +1229,15 @@ dependencies = [
 
 [[package]]
 name = "indexed-db"
-version = "0.4.1"
+version = "0.4.2"
 source = "registry+https://github.com/rust-lang/crates.io-index"
-checksum = "c8d1a6dc2ff1680ae3856d2a3a42b8f9d70b91c3883705cfd0a8f1ea0ed850c8"
+checksum = "78f4ecbb6cd50773303683617a93fc2782267d2c94546e9545ec4190eb69aa1a"
 dependencies = [
  "futures-channel",
  "futures-util",
  "pin-project-lite",
  "scoped-tls",
- "thiserror 1.0.69",
+ "thiserror 2.0.11",
  "web-sys",
 ]
 
