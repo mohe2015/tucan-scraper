@@ -282,7 +282,7 @@
           mkdir -p out
           cd out
           # seems like chromium writes into the parent folder of the pack-extension argument
-          chmod -R ug+rw tucant-extension-${version}
+          chmod -R ug+rw tucant-extension-${version} || true
           rm -Rf tucant-extension-${version}
           cp -r ${extension-unpacked} tucant-extension-${version}
           ${pkgs.chromium}/bin/chromium --no-sandbox --pack-extension=tucant-extension-${version} --pack-extension-key=$CHROMIUM_EXTENSION_SIGNING_KEY
