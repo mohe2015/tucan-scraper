@@ -28,7 +28,7 @@ jobs:
         CHROMIUM_EXTENSION_SIGNING_KEY: ${{ secrets.CHROMIUM_EXTENSION_SIGNING_KEY }}
       run: |
         echo $CHROMIUM_EXTENSION_SIGNING_KEY | base64 --decode > cert.pem
-        nix build .#publish && cat result && CHROMIUM_EXTENSION_SIGNING_KEY=cert.pem ./result
+        nix build .#publish && cat result && CHROMIUM_EXTENSION_SIGNING_KEY=$PWD/cert.pem ./result
     - uses: actions/upload-artifact@v4
       with:
         name: tucant-extension-${{ steps.version.outputs.VERSION }}-crx
